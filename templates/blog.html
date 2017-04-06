@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Basic Blog</title>
+		<style>
+			h2 {
+				text-align: center;
+			}
+			body{
+				font-family: sans-serif;
+				width: 1000px;
+				margin: 0 auto;
+				padding: 10px;
+			}
+			hr {
+				height: 2px;
+				background-color: #000000;
+			}
+			.row {
+				width: 100%;
+				display: flex;
+			}
+			.subject {
+				width: 75%;
+			}
+			.time {
+				text-align: right;
+				width: 25%;
+			}
+			pre{
+				font-family: sans-serif;
+				text-align: left;
+				white-space: pre-wrap;
+			}
+			.text {
+				width: 100%;
+				display: flex;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h2> Basic Blog </h2>
+		{%  for data in blogdata %}
+			<div class="row">
+				<div class="subject">{{data.subject}}</div>  
+				<div class="time">{{data.date}}</div>
+			</div>
+			<hr>
+			<div class="text"><pre>
+			{{data.content}}
+			</pre></div>
+		{% endfor %}
+			<br>
+			<br>
+		
+	</body>
+</html>

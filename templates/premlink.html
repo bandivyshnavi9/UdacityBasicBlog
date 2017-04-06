@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic Blog</title>
+	<style>
+			body{
+			font-family: sans-serif;
+			width: 1000px;
+			margin: 0 auto;
+			padding: 10px;
+			}
+		h2{
+			text-align: center;
+		}
+		.row{ 
+			width: 100%;
+			display: flex;	
+		}
+		.subrow {
+			width: 75%;
+		}
+		hr {
+			height: 2px;
+			background-color: #000000;
+			}
+	</style>
+</head>
+<body>
+	<a href="{{link}}"><h2> Basic Blog </h2></a>
+	<div class="row">
+		<div class="subrow">
+			{{subject}}
+		</div>
+			{{date}}
+	</div>
+	<hr>
+	<div class="row">
+			{{content}}
+	</div>
+</body>
+</html>

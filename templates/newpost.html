@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Basic Blog</title>
+	<style>
+		body{
+			font-family: sans-serif;
+			width: 1000px;
+			margin: 0 auto;
+			padding: 10px;
+			}
+		h2{
+			text-align: center;
+		}
+		textarea{
+			width: 300px;
+			height: 300px;
+		}
+		input[type =submit]{
+			margin-left: 100px;
+			width: 100px;
+		}
+		h3{
+			margin-left: 100px;
+		}
+		.row{ 
+			width: 100%;
+			display: flex;	
+			margin-left: 100px;
+		}
+		.subrow {
+			width: 40%;
+		}
+		.error {
+			width: 60%;
+			text-align: left;
+			color: red;
+		}
+		.labelsec{
+			width: 100%;
+			margin-bottom: 5px;
+			margin-left: 100px;
+		}
+		label{
+			text-align: left;
+		}
+		.button{
+			margin-top: 5px;
+			width: 600px;
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body>
+	<h2> Basic Blog</h2>
+	<h3> new post</h3>
+	<form method="post">
+	<div class="labelsec"><label> subject</label></div>
+	<div class="row">
+		<div class="subrow">
+			<input type="text" name="subject" value="{{subject}}">	
+		</div>
+			<div class="error">{{errorsubject}}</div>
+	</div>
+	<br>
+	<div class="labelsec"><label>blog</label></div>
+	<div class="row">
+		<div class="subrow">
+			<textarea name="content">{{content}}</textarea>
+		</div>
+			<div class="error">{{errorcontent}}</div>
+	</div>
+	<div class="button">
+		<input type="submit">
+	</div>
+	</form>
+</body>
+</html>
